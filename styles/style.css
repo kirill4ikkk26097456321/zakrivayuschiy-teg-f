@@ -91,7 +91,8 @@
 .page-subtitle {
 	font-family: var(--accent-font), sans-serif;
 	font-weight: 400;
-	font-size: clamp(14px, 5vw, 23px);
+	font-size: clamp(14px, 3vw, 23px);
+	text-transform: uppercase;
 }
 
 .header_container {
@@ -203,7 +204,8 @@
 .save-button {
 	inline-size: 335px;
 	block-size: 55px;
-	margin: 48px auto;
+	margin: 45px auto;
+	margin-bottom: 99px;
 }
 
 .save-button svg {
@@ -220,6 +222,9 @@
 
 .button:focus {
 	outline: none;
+}
+
+.button:focus-visible {
 	box-shadow: 2px 2px 0 #000;
 }
 
@@ -334,8 +339,14 @@
 }
 
 @media (max-width: 375px) {
+
+	.header_container {
+		gap: 20px;
+		padding-bottom: 122px;
+		padding-top: 122px;
+	}
+
 	.card-image {
-		inline-size: 100%;
 		max-inline-size: 100%;
 	}
 
@@ -344,17 +355,14 @@
 	}
 
 	.save-button {
-		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-    inline-size: 309px;
-    block-size: 84px;
+		inline-size: 309px;
+		block-size: 84px;
 	}
 
 	.button.save-button svg {
-    width: 28px;
-    height: 28px;
-    block-size: auto;
+		width: 28px;
+		height: 28px;
+		block-size: auto;
 	}
 }
